@@ -1,0 +1,18 @@
+.button {
+    -fx-background-color: linear-gradient(#f2f2f2, #d6d6d6);
+    -fx-background-radius: 5;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15 8 15;
+}
+
+.table-view {
+    -fx-border-color: #d6d6d6;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555555;
+}

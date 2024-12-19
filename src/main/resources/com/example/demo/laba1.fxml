@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <VBox spacing="10" layoutX="10" layoutY="10">
+      <HBox spacing="10">
+         <Button text="Додати" onAction="#handleAdd"/>
+         <Button text="Редагувати" onAction="#handleEdit"/>
+         <Button text="Видалити" onAction="#handleDelete"/>
+      </HBox>
+      <HBox spacing="10" alignment="CENTER">
+         <TextField fx:id="searchField" promptText="Введіть ПІБ або телефон" />
+         <Button text="Пошук" onAction="#handleSearch" />
+      </HBox>
+      <TableView fx:id="dataTable">
+         <columns>
+            <TableColumn fx:id="columnName" text="ПІБ" prefWidth="250" />
+            <TableColumn fx:id="columnPhone" text="Телефон" prefWidth="250" />
+         </columns>
+      </TableView>
+
+      <Label fx:id="counterLabel" text="Кількість записів: 0"/>
+      <HBox spacing="10">
+         <Button text="Інше" onAction="#handleOther" layoutX="50" layoutY="250"/>
+         <Button text="Вихід" onAction="#handleExit"/>
+      </HBox>
+
+   <!-- Додаємо кнопку "Музика" внизу -->
+   <Button text="Музика" onAction="#handleMusic" />
+   </VBox>
+</AnchorPane>
+

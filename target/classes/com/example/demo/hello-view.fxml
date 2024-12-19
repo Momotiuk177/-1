@@ -1,0 +1,17 @@
+    <?import javafx.scene.control.*?>
+    <?import javafx.scene.layout.*?>
+
+    <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+        <!-- Панель для кнопок "Додати", "Редагувати", "Видалити" -->
+        <VBox spacing="10" alignment="CENTER" layoutX="20" layoutY="20">
+            <Button fx:id="addButton" text="Додати" onAction="#handleAdd"/>
+            <Button fx:id="editButton" text="Редагувати" onAction="#handleEdit"/>
+            <Button fx:id="deleteButton" text="Видалити" onAction="#handleDelete"/>
+        </VBox>
+
+        <!-- Панель для кнопки "Hello World" внизу -->
+        <VBox spacing="10" alignment="CENTER" layoutX="20" layoutY="160">
+            <Button fx:id="helloWorldButton" text="Hello World" onAction="#handleHelloWorld"/>
+        </VBox>
+
+    </AnchorPane>

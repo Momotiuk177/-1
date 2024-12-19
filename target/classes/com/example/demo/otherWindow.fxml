@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.stage.Stage?>
+<?import javafx.stage.FileChooser?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="8" fx:controller="com.example.demo.OtherWindowController" prefHeight="600" prefWidth="800">
+    <stylesheets>
+        <URL value="@Stylles.css" />
+    </stylesheets>
+    <Label text="Тест на знання JavaFX" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 10;" />
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+
+            <!-- Запитання 1 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="1. Який клас використовує для створення кнопок у JavaFX?" style="-fx-font-size: 14px;" />
+                <RadioButton text="Button" fx:id="answer1Button" />
+                <RadioButton text="Label" fx:id="answer1Label" />
+                <RadioButton text="TextField" fx:id="answer1TextField" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer1" />
+                <Label fx:id="result1" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Запитання 2 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="2. Яка бібліотека використовується для керування елементами UI?" style="-fx-font-size: 14px;" />
+                <ComboBox fx:id="comboBox" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer2" />
+                <Label fx:id="result2" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Запитання 3 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="3. Який клас використовує для керування вікнами?" style="-fx-font-size: 14px;" />
+                <RadioButton text="Stage" fx:id="answer3Button" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer3" />
+                <Label fx:id="result3" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Запитання 4 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="4. Який клас використовує для запуску програми?" style="-fx-font-size: 14px;" />
+                <TextField fx:id="answer4Field" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer4" />
+                <Label fx:id="result4" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Запитання 5 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="5. Який клас є основним у JavaFX?" style="-fx-font-size: 14px;" />
+                <CheckBox text="Application" fx:id="checkbox5Application" />
+                <CheckBox text="Main" fx:id="checkbox5Main" />
+                <CheckBox text="Launcher" fx:id="checkbox5Launcher" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer5" />
+                <Label fx:id="result5" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Запитання 6 -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="6. Яка бібліотека створює вікна?" style="-fx-font-size: 14px;" />
+                <ChoiceBox fx:id="choiceBox" />
+                <Button text="Зберегти відповідь" onAction="#handleSaveAnswer6" />
+                <Label fx:id="result6" style="-fx-font-size: 12px;" />
+            </HBox>
+
+            <!-- Виведення результатів -->
+            <VBox spacing="10">
+                <Label fx:id="result1" />
+                <Label fx:id="result2" />
+                <Label fx:id="result3" />
+                <Label fx:id="result4" />
+                <Label fx:id="result5" />
+                <Label fx:id="result6" />
+            </VBox>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Змінити зображення -->
+    <Button text="Змінити зображення" onAction="#handleChangeImage" />
+    <ImageView fx:id="imageView" fitHeight="150" fitWidth="150" />
+    <Button text="Закрити" onAction="#handleCloseWindow" />
+</VBox>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MusicController" spacing="10" alignment="CENTER">
+    <!-- Список для відображення треків -->
+    <ListView fx:id="musicListView" prefHeight="200" prefWidth="400" />
+
+    <!-- Кнопки для відтворення та зупинки -->
+    <HBox spacing="10">
+        <Button text="Відтворити" onAction="#handlePlay" />
+        <Button text="Зупинити" onAction="#handleStop" />
+    </HBox>
+</VBox>
